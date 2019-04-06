@@ -1,0 +1,108 @@
+@charset "ISO-8859-1";
+
+body{
+	margin: 0;
+	background-image: linear-gradient(rgba(54,1,54,8),rgba(54,1,54,8))
+}
+
+.header{
+	width: 100%;
+	height: 20px;
+}
+
+h1{
+	font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	color:#FF8CD8;
+}
+
+p{
+	font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	color:white;
+}
+ul{
+	margin-top: 20px;
+	list-style-type: none;
+	float: right;
+}
+
+ul li{
+	display: inline-block;
+	padding-top: 20px;
+}
+
+ul li a{
+	padding: 5px 20px;
+	border: 1.5px solid transparent;
+	text-decoration: none;
+	transition: 0.8s ease;
+	font-size: 30px;
+	font-family:"Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+}
+
+ul li a:hover{
+	background-color: #6C09E3;
+	color: #000000;
+}
+
+#contenedorGaleriaImagenes{
+	width: 1280px;
+	margin: 70px auto 0;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+#contenedorGaleriaImagenes #cImagen{
+	position: relative;
+	width: 300px;
+	height: 300px;
+	background: #ff0;
+	margin: 10px;
+	box-sizing: border-box;
+	display: inline-block;
+}
+
+#contenedorGaleriaImagenes #cImagen #imag{
+	position: relative;
+	overflow: hidden;
+}
+
+#contenedorGaleriaImagenes #cImagen #imag img{
+	max-width: 100%;
+	transition: transform 2s;
+}
+
+#contenedorGaleriaImagenes #cImagen:hover #imag img{
+	transform: scale(1.2);
+}
+
+#contenedorGaleriaImagenes #cImagen #nombreP{
+	position: absolute;
+	top: 10px;
+	bottom: 10px;
+	left: 10px;
+	right: 10px;
+	background: rgba(0,0,0,0.8);
+	transform: scaleY(0);
+	transition: transform 0.5s;
+}
+
+#contenedorGaleriaImagenes #cImagen:hover #nombreP{
+	transform: scaleY(1);
+}
+
+
+#contenedorGaleriaImagenes #cImagen #nombreP #personaje{
+	position: absolute;
+	top: 60%;
+	transform: translateY(-60%);
+	text-align: center;
+	padding: 15px;
+}
+
+#contenedorGaleriaImagenes #cImagen #nombreP #personaje h2{
+	margin: 0;
+	padding: 0;
+	font-size: 20px;
+	color: #ff0;
+}
